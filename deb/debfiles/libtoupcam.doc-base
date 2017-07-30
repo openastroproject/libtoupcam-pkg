@@ -1,0 +1,10 @@
+Document: libtoupcam
+Title: libtoupcam SDK Manual
+Author: Touptek
+Abstract: How to use the libtoupcam SDK
+Section: Science/Astronomy
+
+Format: HTML
+Index: /usr/share/doc/libtoupcam/en.html
+Files: /usr/share/doc/libtoupcam/*.html
+
