@@ -1,5 +1,5 @@
-libtoupcam (1.6.5660-1) xenial; urgency=medium
+libtoupcam (1.33.13725-1) xenial; urgency=medium
 
   * Initial release
 
- -- James Fidell <james@openastroproject.org>  Sun, 30 Jul 2017 22:18:55 +0100
+ -- James Fidell <james@openastroproject.org>  Fri, 11 Jan 2019 19:55:55 +0100

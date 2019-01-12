@@ -1,14 +1,14 @@
 %define debug_package %{nil}
 
 Name:           libtoupcam
-Version:        1.6.5660
+Version:        1.33.13725
 Release:        0
 Summary:        Touptek camera support libraries
 License:	GPLv2+
 URL:            http://touptek.com/
 Prefix:         %{_prefix}
 Provides:       libtoupcam = %{version}-%{release}
-Obsoletes:      libtoupcam < 1.6.5660
+Obsoletes:      libtoupcam < 1.33.13725
 Source:         libtoupcam-%{version}.tar.gz
 Patch0:         pkg-config.patch
 
@@ -20,7 +20,7 @@ Summary:        Development files for %{name}
 Group:          Development/Libraries
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Provides:       libtoupcam-devel = %{version}-%{release}
-Obsoletes:      libtoupcam-devel < 1.6.5660
+Obsoletes:      libtoupcam-devel < 1.33.13725
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
@@ -70,6 +70,6 @@ cp doc/* %{buildroot}%{_docdir}/%{name}-%{version}
 %{_docdir}/%{name}-%{version}/*.html
 
 %changelog
-* Sun Jul 30 2017 James Fidell <james@openastroproject.org> - 1.6.5660-0
+* Sun Jul 30 2017 James Fidell <james@openastroproject.org> - 1.33.13725-0
 - Initial RPM release
 

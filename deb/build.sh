@@ -13,8 +13,7 @@ quiltconf=$HOME/.quiltrc-dpkg
 mkdir $srcdir
 cd $srcdir
 tar zxf ../libtoupcam-$version.tar.gz
-chmod -x demo/*.*
-chmod -x demo/Makefile
+test -d demo && ( chmod -x demo/*.* Makefile )
 YFLAG=-y
 dh_make -v | fgrep -q '1998-2011'
 if [ $? -eq 0 ]

@@ -1,9 +1,17 @@
+VERSION=1.33.13725
 
 override_dh_auto_build:
 	dh_auto_build -- LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH) VERSION=DEBVERSION
 
 override_dh_auto_install:
-	ln linux/x64/libtoupcam.so linux/x64/libtoupcam.so.1.6.5660
+	case $(DEB_BUILD_ARCH) in \
+		amd64) \
+			ln linux/x64/libtoupcam.so linux/x64/libtoupcam.so.$(VERSION);; \
+		aarch64) \
+			ln linux/arm64/libtoupcam.so linux/arm64/libtoupcam.so.$(VERSION);; \
+		armhf) \
+			ln linux/armhf/libtoupcam.so linux/armhf/libtoupcam.so.$(VERSION);; \
+	esac
 	dh_auto_install -- SRCDIR=$(CURDIR) ARCH=$(DEB_TARGET_ARCH) \
 		INCDIR=$(CURDIR)/debian/tmp/usr/include \
 		LIBDIR=$(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH) \
