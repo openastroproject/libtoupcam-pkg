@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DEBEMAIL=james@openastro.org
+export DEBEMAIL=james@openastroproject.org
 export DEBFULLNAME="James Fidell"
 
 version=`cat version`
@@ -28,7 +28,6 @@ cp ../debfiles/changelog $debdir
 cp ../debfiles/docs $debdir
 cp ../debfiles/watch $debdir
 cp ../debfiles/libtoupcam.dirs $debdir
-cp ../debfiles/libtoupcam.links $debdir
 cp ../debfiles/libtoupcam.install $debdir
 cp ../debfiles/libtoupcam.symbols $debdir
 cp ../debfiles/libtoupcam.doc-base $debdir

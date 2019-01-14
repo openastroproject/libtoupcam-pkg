@@ -1,6 +1,6 @@
 --- Makefile	1970-01-01 01:00:00.000000000 +0100
 +++ Makefile	2016-11-10 17:31:08.686722661 +0000
-@@ -0,0 +1,19 @@
+@@ -0,0 +1,20 @@
 +all:	libtoupcam.pc
 +
 +%.pc:	%.pc.in
@@ -18,5 +18,6 @@
 +		cp $(SRCDIR)/linux/armhf/libtoupcam*.so.$(VERSION) $(LIBDIR);; \
 +	esac
 +	ln -sf libtoupcam.so.$(VERSION) $(LIBDIR)/libtoupcam.so.$(MAJOR_REV)
++	ln -sf libtoupcam.so.$(VERSION) $(LIBDIR)/libtoupcam.so
 +	cp $(SRCDIR)/inc/*.h $(INCDIR)
 +	cp $(SRCDIR)/libtoupcam.pc $(PKGCONFDIR)
