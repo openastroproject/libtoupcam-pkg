@@ -30,6 +30,7 @@ cp ../debfiles/watch $debdir
 cp ../debfiles/libtoupcam.dirs $debdir
 cp ../debfiles/libtoupcam.install $debdir
 cp ../debfiles/libtoupcam.symbols $debdir
+cp ../debfiles/libtoupcam.triggers $debdir
 cp ../debfiles/libtoupcam.doc-base $debdir
 cp ../debfiles/libtoupcam-dev.dirs $debdir
 cp ../debfiles/libtoupcam-dev.install $debdir
