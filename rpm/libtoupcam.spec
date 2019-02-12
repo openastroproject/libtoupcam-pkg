@@ -9,8 +9,9 @@ URL:            http://touptek.com/
 Prefix:         %{_prefix}
 Provides:       libtoupcam = %{version}-%{release}
 Obsoletes:      libtoupcam < 1.33.13725
-Source:         libtoupcam-%{version}.tar.gz
+Source:         ../libtoupcam-%{version}.tar.gz
 Patch0:         pkg-config.patch
+Patch1:         udev-rules.patch
 
 %description
 libtoupcam is a user-space driver for Touptek astronomy cameras.
@@ -39,6 +40,7 @@ sed -e "s!@LIBDIR@!%{_libdir}!g" -e "s!@VERSION@!%{version}!g" < \
 mkdir -p %{buildroot}%{_libdir}/pkgconfig
 mkdir -p %{buildroot}%{_includedir}
 mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}
+mkdir -p %{buildroot}/etc/udev/rules.d
 
 case %{_arch} in
   x86_64)
@@ -57,9 +59,11 @@ cp doc/* %{buildroot}%{_docdir}/%{name}-%{version}
 
 %post
 /sbin/ldconfig
+/sbin/udevadm control --reload-rules
 
 %postun
 /sbin/ldconfig
+/sbin/udevadm control --reload-rules
 
 %files
 %{_libdir}/*.so.*
@@ -68,6 +72,7 @@ cp doc/* %{buildroot}%{_docdir}/%{name}-%{version}
 %{_includedir}/toupcam*.h
 %{_libdir}/pkgconfig/%{name}*.pc
 %{_docdir}/%{name}-%{version}/*.html
+%{_sysconfdir}/udev/rules.d/*.rules
 
 %changelog
 * Sun Jul 30 2017 James Fidell <james@openastroproject.org> - 1.33.13725-1

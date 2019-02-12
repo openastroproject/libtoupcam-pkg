@@ -10,9 +10,8 @@ debdir=debian
 debsrc=$debdir/source
 quiltconf=$HOME/.quiltrc-dpkg
 
-mkdir $srcdir
-cd $srcdir
 tar zxf ../libtoupcam-$version.tar.gz
+cd $srcdir
 test -d demo && ( chmod -x demo/*.* Makefile )
 YFLAG=-y
 dh_make -v | fgrep -q '1998-2011'
@@ -20,7 +19,7 @@ if [ $? -eq 0 ]
 then
   YFLAG=''
 fi
-dh_make $YFLAG -l -f ../libtoupcam-$version.tar.gz
+dh_make $YFLAG -l -f ../../libtoupcam-$version.tar.gz
 
 cp ../debfiles/control $debdir
 cp ../debfiles/copyright $debdir

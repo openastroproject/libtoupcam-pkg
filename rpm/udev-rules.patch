@@ -1,0 +1,453 @@
+Create udev ruleset for Touptek cameras
+--- 70-touptek-cameras.rules	1970-01-01 01:00:00.000000000 +0100
++++ 70-touptek-cameras.rules	2018-09-25 00:53:43.247858211 +0100
+@@ -0,0 +1,449 @@
++#
++# 70-touptek-cameras.rules -- Udev rules for Touptek cameras
++#
++# Copyright 2016,2018,2019 James Fidell (james@openastroproject.org)
++#
++# License:
++#
++# This file is part of the Open Astro Project.
++#
++# The Open Astro Project is free software: you can redistribute it and/or
++# modify it under the terms of the GNU General Public License as published
++# by the Free Software Foundation, either version 3 of the License, or
++# (at your option) any later version.
++#
++# The Open Astro Project is distributed in the hope that it will be
++# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
++# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++# GNU General Public License for more details.
++#
++# You should have received a copy of the GNU General Public License
++# along with the Open Astro Project.  If not, see
++# <http://www.gnu.org/licenses/>.
++#
++
++# UCMOS00350KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6035", TAG+="uaccess"
++
++# UCMOS01200KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6122", TAG+="uaccess"
++
++# UCMOS01300KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6130", TAG+="uaccess"
++
++# UCMOS02000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6200", TAG+="uaccess"
++
++# UCMOS02000KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6201", TAG+="uaccess"
++
++# UCMOS03100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6310", TAG+="uaccess"
++
++# UCMOS05100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6510", TAG+="uaccess"
++
++# UCMOS05100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6512", TAG+="uaccess"
++
++# UCMOS08000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6800", TAG+="uaccess"
++
++# UCMOS08000KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6801", TAG+="uaccess"
++
++# UCMOS09000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6900", TAG+="uaccess"
++
++# UCMOS09000KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6901", TAG+="uaccess"
++
++# UCMOS10000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6010", TAG+="uaccess"
++
++# WCMOS10000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6b10", TAG+="uaccess"
++
++# UCMOS14000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6014", TAG+="uaccess"
++
++# UCMOS01200KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6121", TAG+="uaccess"
++
++# UCMOS01300KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6131", TAG+="uaccess"
++
++# UCMOS05100KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="6511", TAG+="uaccess"
++
++# LCMOS01300KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f130", TAG+="uaccess"
++
++# LCMOS01200KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f132", TAG+="uaccess"
++
++# LCMOS02000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f200", TAG+="uaccess"
++
++# LCMOS03100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f310", TAG+="uaccess"
++
++# LCMOS03100KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f312", TAG+="uaccess"
++
++# LCMOS05100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f510", TAG+="uaccess"
++
++# LCMOS08000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f800", TAG+="uaccess"
++
++# LCMOS09000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f900", TAG+="uaccess"
++
++# LCMOS10000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f010", TAG+="uaccess"
++
++# LCMOS14000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="f014", TAG+="uaccess"
++
++# LCMOS14000KPC
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="fc14", TAG+="uaccess"
++
++# LECCD01300KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="e130", TAG+="uaccess"
++
++# UHCCD00800KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8080", TAG+="uaccess"
++
++# UHCCD01400KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8140", TAG+="uaccess"
++
++# UHCCD01400KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8146", TAG+="uaccess"
++
++# EXCCD01400KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8141", TAG+="uaccess"
++
++# EXCCD00300KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8031", TAG+="uaccess"
++
++# EXCCD00300KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8306", TAG+="uaccess"
++
++# UHCCD02000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8200", TAG+="uaccess"
++
++# UHCCD02000KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8201", TAG+="uaccess"
++
++# UHCCD03100KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8311", TAG+="uaccess"
++
++# UHCCD05000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8500", TAG+="uaccess"
++
++# UHCCD05100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8510", TAG+="uaccess"
++
++# UHCCD05200KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8520", TAG+="uaccess"
++
++# UHCCD06000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8600", TAG+="uaccess"
++
++# UHCCD08000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8800", TAG+="uaccess"
++
++# UHCCD03150KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8315", TAG+="uaccess"
++
++# UHCCD00800KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="7800", TAG+="uaccess"
++
++# UHCCD01400KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="7140", TAG+="uaccess"
++
++# UHCCD01400KMB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="7141", TAG+="uaccess"
++
++# UHCCD02000KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="7200", TAG+="uaccess"
++
++# UHCCD03150KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="7315", TAG+="uaccess"
++
++# EXCCD01400KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8142", TAG+="uaccess"
++
++# SCCCD01400KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="9141", TAG+="uaccess"
++
++# SCCCD01400KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="9146", TAG+="uaccess"
++
++# SCCCD05200KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="9520", TAG+="uaccess"
++
++# SCCCD01400KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="9142", TAG+="uaccess"
++
++# SCCCD01400KMB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="9143", TAG+="uaccess"
++
++# ICMOS03100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="a310", TAG+="uaccess"
++
++# ICMOS01300KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="a131", TAG+="uaccess"
++
++# ICMOS10000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="a010", TAG+="uaccess"
++
++# ICMOS14000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="a014", TAG+="uaccess"
++
++# GCMOS01200KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="b122", TAG+="uaccess"
++
++# GCMOS01200KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="b123", TAG+="uaccess"
++
++# GCMOS01200KMB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="b134", TAG+="uaccess"
++
++# GCMOS03100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="b310", TAG+="uaccess"
++
++# U3CMOS18000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3018", TAG+="uaccess"
++
++# U3CMOS16000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3016", TAG+="uaccess"
++
++# U3CMOS10000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3010", TAG+="uaccess"
++
++# U3CMOS14000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3014", TAG+="uaccess"
++
++# U3CMOS14000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3b14", TAG+="uaccess"
++
++# U3CMOS14000KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3bb4", TAG+="uaccess"
++
++# U3CMOS03100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3310", TAG+="uaccess"
++
++# U3CMOS03100KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3312", TAG+="uaccess"
++
++# U3CMOS05100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3510", TAG+="uaccess"
++
++# U3CMOS08500KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3850", TAG+="uaccess"
++
++# U3CMOS01300KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3130", TAG+="uaccess"
++
++# U3CMOS03100KPC
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3314", TAG+="uaccess"
++
++# UHCCD01400KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8148", TAG+="uaccess"
++
++# UHCCD01400KMB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8149", TAG+="uaccess"
++
++# UHCCD02000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8206", TAG+="uaccess"
++
++# UHCCD03100KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8316", TAG+="uaccess"
++
++# UHCCD05000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8506", TAG+="uaccess"
++
++# UHCCD05100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8516", TAG+="uaccess"
++
++# UHCCD05200KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8526", TAG+="uaccess"
++
++# EXCCD01400KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="814e", TAG+="uaccess"
++
++# EXCCD01400KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="814f", TAG+="uaccess"
++
++# U3CMOS18000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4018", TAG+="uaccess"
++
++# U3CMOS16000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4016", TAG+="uaccess"
++
++# U3CMOS10000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4010", TAG+="uaccess"
++
++# U3CMOS14000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4014", TAG+="uaccess"
++
++# U3CMOS14000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4b14", TAG+="uaccess"
++
++# U3CMOS14000KPB (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4bb4", TAG+="uaccess"
++
++# U3CMOS03100KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4310", TAG+="uaccess"
++
++# U3CMOS03100KPB (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4312", TAG+="uaccess"
++
++# U3CMOS05100KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4510", TAG+="uaccess"
++
++# U3CMOS08500KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4850", TAG+="uaccess"
++
++# U3CMOS01300KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4130", TAG+="uaccess"
++
++# U3CMOS03100KPC (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4314", TAG+="uaccess"
++
++# L3CMOS14000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="c014", TAG+="uaccess"
++
++# L3CMOS14000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="cb14", TAG+="uaccess"
++
++# L3CMOS10000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="c010", TAG+="uaccess"
++
++# L3CMOS08500KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="c850", TAG+="uaccess"
++
++# L3CMOS05100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="c510", TAG+="uaccess"
++
++# L3CMOS03100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="c310", TAG+="uaccess"
++
++# L3CMOS03000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="c300", TAG+="uaccess"
++
++# L3CMOS01300KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="c130", TAG+="uaccess"
++
++# L3CMOS03100KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="c312", TAG+="uaccess"
++
++# L3CMOS14000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="d014", TAG+="uaccess"
++
++# L3CMOS14000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="db14", TAG+="uaccess"
++
++# L3CMOS10000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="d010", TAG+="uaccess"
++
++# L3CMOS08500KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="d850", TAG+="uaccess"
++
++# L3CMOS05100KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="d510", TAG+="uaccess"
++
++# L3CMOS03100KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="d310", TAG+="uaccess"
++
++# L3CMOS03000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="d300", TAG+="uaccess"
++
++# L3CMOS01300KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="d130", TAG+="uaccess"
++
++# L3CMOS03100KPB (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="d312", TAG+="uaccess"
++
++# E3CMOS16000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="e316", TAG+="uaccess"
++
++# E3CMOS16000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="e216", TAG+="uaccess"
++
++# E3CMOS18000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="e318", TAG+="uaccess"
++
++# E3CMOS18000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="e218", TAG+="uaccess"
++
++# EXCCD00440KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8044", TAG+="uaccess"
++
++# EXCCD00440KMA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8045", TAG+="uaccess"
++
++# EXCCD00440KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8046", TAG+="uaccess"
++
++# EXCCD00440KMB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="8047", TAG+="uaccess"
++
++# U3ISPM14000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3714", TAG+="uaccess"
++
++# E3CMOS03100KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3731", TAG+="uaccess"
++
++# E3CMOS02300KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="3723", TAG+="uaccess"
++
++# U3ISPM14000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4714", TAG+="uaccess"
++
++# E3CMOS03100KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4731", TAG+="uaccess"
++
++# E3CMOS02300KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="4723", TAG+="uaccess"
++
++# E3CMOS06300KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="2000", TAG+="uaccess"
++
++# E3CMOS06300KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="2001", TAG+="uaccess"
++
++# E3CMOS12000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="2002", TAG+="uaccess"
++
++# E3CMOS12000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="2003", TAG+="uaccess"
++
++# U3CCD02800KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="2004", TAG+="uaccess"
++
++# U3CCD02800KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="2005", TAG+="uaccess"
++
++# U3CCD06000KPA
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="2006", TAG+="uaccess"
++
++# U3CCD06000KPA (USB2)
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="2007", TAG+="uaccess"
++
++# Auto Focus Controller
++SUBSYSTEM=="usb", ATTRS{idVendor}=="0547", ATTRS{idProduct}=="1010", TAG+="uaccess"
++
++
++# Can't match a vendor ID for these ones
++
++# UCMOS03100KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="232f", ATTRS{idProduct}=="5003", TAG+="uaccess"
++
++# UCMOS02000KPC
++SUBSYSTEM=="usb", ATTRS{idVendor}=="232f", ATTRS{idProduct}=="5002", TAG+="uaccess"
++
++# UCMOS01300KPB
++SUBSYSTEM=="usb", ATTRS{idVendor}=="232f", ATTRS{idProduct}=="5001", TAG+="uaccess"
