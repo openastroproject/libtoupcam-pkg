@@ -77,4 +77,4 @@ dpkg-buildpackage -us -uc
 
 echo "Now run:"
 echo
-echo "    lintian -i -I --show-overrides libtoupcam_$version-1_amd64.changes"
+echo "    lintian -i -I --show-overrides libtoupcam_$version-2_amd64.changes"
