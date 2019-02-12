@@ -2,7 +2,7 @@
 
 Name:           libtoupcam
 Version:        1.33.13725
-Release:        0
+Release:        1
 Summary:        Touptek camera support libraries
 License:	GPLv2+
 URL:            http://touptek.com/
@@ -70,6 +70,6 @@ cp doc/* %{buildroot}%{_docdir}/%{name}-%{version}
 %{_docdir}/%{name}-%{version}/*.html
 
 %changelog
-* Sun Jul 30 2017 James Fidell <james@openastroproject.org> - 1.33.13725-0
+* Sun Jul 30 2017 James Fidell <james@openastroproject.org> - 1.33.13725-1
 - Initial RPM release
 
