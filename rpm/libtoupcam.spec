@@ -9,7 +9,7 @@ URL:            http://touptek.com/
 Prefix:         %{_prefix}
 Provides:       libtoupcam = %{version}-%{release}
 Obsoletes:      libtoupcam < 1.33.13725
-Source:         ../libtoupcam-%{version}.tar.gz
+Source:         libtoupcam-%{version}.tar.gz
 Patch0:         pkg-config.patch
 Patch1:         udev-rules.patch
 
@@ -30,6 +30,7 @@ developing applications that use %{name}.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p0
 
 %build
 
@@ -40,7 +41,7 @@ sed -e "s!@LIBDIR@!%{_libdir}!g" -e "s!@VERSION@!%{version}!g" < \
 mkdir -p %{buildroot}%{_libdir}/pkgconfig
 mkdir -p %{buildroot}%{_includedir}
 mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}
-mkdir -p %{buildroot}/etc/udev/rules.d
+mkdir -p %{buildroot}%{_udevrulesdir}
 
 case %{_arch} in
   x86_64)
@@ -56,6 +57,7 @@ ln -sf %{name}.so.%{version} %{buildroot}%{_libdir}/%{name}.so.1
 cp inc/*.h %{buildroot}%{_includedir}
 cp *.pc %{buildroot}%{_libdir}/pkgconfig
 cp doc/* %{buildroot}%{_docdir}/%{name}-%{version}
+cp 70-touptek-cameras.rules %{buildroot}%{_udevrulesdir}
 
 %post
 /sbin/ldconfig
@@ -67,12 +69,12 @@ cp doc/* %{buildroot}%{_docdir}/%{name}-%{version}
 
 %files
 %{_libdir}/*.so.*
+%{_udevrulesdir}/*.rules
 
 %files devel
 %{_includedir}/toupcam*.h
 %{_libdir}/pkgconfig/%{name}*.pc
 %{_docdir}/%{name}-%{version}/*.html
-%{_sysconfdir}/udev/rules.d/*.rules
 
 %changelog
 * Sun Jul 30 2017 James Fidell <james@openastroproject.org> - 1.33.13725-1
