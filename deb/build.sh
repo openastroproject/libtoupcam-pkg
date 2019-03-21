@@ -10,6 +10,20 @@ debdir=debian
 debsrc=$debdir/source
 quiltconf=$HOME/.quiltrc-dpkg
 
+debversion=`cat /etc/debian_version`
+case $debversion in
+  jessie/sid)
+    compatversion=9
+    ;;
+  stretch/sid)
+    compatversion=9
+    ;;
+  *)
+    compatversion=10
+    ;;
+esac
+echo $compatversion > debfiles/compat
+
 tar zxf ../libtoupcam-$version.tar.gz
 cd $srcdir
 test -d demo && ( chmod -x demo/*.* Makefile )
@@ -21,9 +35,10 @@ then
 fi
 dh_make $YFLAG -l -f ../../libtoupcam-$version.tar.gz
 
-cp ../debfiles/control $debdir
+sed -e "s/@@COMPAT@@/$compatversion/" < ../debfiles/control > $debdir/control
 cp ../debfiles/copyright $debdir
 cp ../debfiles/changelog $debdir
+cp ../debfiles/compat $debdir
 cp ../debfiles/docs $debdir
 cp ../debfiles/watch $debdir
 cp ../debfiles/libtoupcam.dirs $debdir
@@ -33,8 +48,6 @@ cp ../debfiles/libtoupcam.triggers $debdir
 cp ../debfiles/libtoupcam.doc-base $debdir
 cp ../debfiles/libtoupcam-dev.dirs $debdir
 cp ../debfiles/libtoupcam-dev.install $debdir
-
-echo 10 > $debdir/compat
 
 sed -e '/^.*[ |]configure./a\
 	udevadm control --reload-rules || true' < $debdir/postinst.ex > $debdir/postinst
