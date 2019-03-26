@@ -7,7 +7,7 @@ override_dh_auto_install:
 	case $(DEB_BUILD_ARCH) in \
 		amd64) \
 			ln linux/x64/libtoupcam.so linux/x64/libtoupcam.so.$(VERSION);; \
-		aarch64) \
+		aarch64|arm64) \
 			ln linux/arm64/libtoupcam.so linux/arm64/libtoupcam.so.$(VERSION);; \
 		armhf) \
 			ln linux/armhf/libtoupcam.so linux/armhf/libtoupcam.so.$(VERSION);; \

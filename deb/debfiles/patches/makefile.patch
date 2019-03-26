@@ -13,7 +13,7 @@ Create makefile for installing pre-built binaries and pkg-config file
 +	case $(DEB_BUILD_ARCH) in \
 +	amd64) \
 +		cp $(SRCDIR)/linux/x64/libtoupcam*.so.$(VERSION) $(LIBDIR);; \
-+	aarch64) \
++	aarch64|arm64) \
 +		cp $(SRCDIR)/linux/arm64/libtoupcam*.so.$(VERSION) $(LIBDIR);; \
 +	armhf) \
 +		cp $(SRCDIR)/linux/armhf/libtoupcam*.so.$(VERSION) $(LIBDIR);; \
