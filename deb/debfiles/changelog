@@ -1,5 +1,65 @@
+libtoupcam (1.55.24621-1) jammy; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Wed, 7 Feb 2024 20:10:00 +0000
+
 libtoupcam (1.55.24239-1) jammy; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Sat, 6 Jan 2024 01:04:55 +0000
+
+libtoupcam (1.50.19728-1) xenial; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Mon, 25 Dec 2023 22:39:55 +0000
+
+libtoupcam (1.48.18081-1) xenial; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Wed, 30 Jun 2021 00:04:55 +0100
+
+libtoupcam (1.48.18042-1) xenial; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Wed, 2 Dec 2020 22:15:55 +0100
+
+libtoupcam (1.46.17118-1) xenial; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Tue, 19 May 2020 00:20:55 +0100
+
+libtoupcam (1.46.16880-1) xenial; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Sat, 2 Sep 2020 00:20:55 +0100
+
+libtoupcam (1.39.15529-1) xenial; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Thu, 12 Sep 2019 20:30:55 +0100
+
+libtoupcam (1.33.13725-2) xenial; urgency=medium
+
+  * Update from upstream
+
+ -- James Fidell <james@openastroproject.org>  Fri, 11 Jan 2019 19:55:55 +0100
+
+libtoupcam (1.33.13725-1) xenial; urgency=medium
+
+  * Increase package release number
+
+ -- James Fidell <james@openastroproject.org>  Fri, 11 Jan 2019 19:55:55 +0100
+
+libtoupcam (1.6.5660-1) xenial; urgency=medium
 
   * Initial release
 
- -- James Fidell <james@openastroproject.org>  Sat, 6 Jan 2024 01:04:55 +0000
+ -- James Fidell <james@openastroproject.org>  Sun, 30 Jul 2017 22:18:55 +010
